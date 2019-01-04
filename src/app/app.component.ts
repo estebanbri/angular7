@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '{ contenido-dinamico }'; //puede ser contenido calculado dinamicamente o datos que vengan de un sv
+  nombre = 'Esteban'; //puede ser contenido calculado dinamicamente o datos que vengan de un sv
 }
