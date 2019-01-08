@@ -1,8 +1,18 @@
 <h2> Estoy en el ServersComponent !</h2>
 <app-server></app-server>
 <app-server></app-server>
+
+<!--String Interpolation-->
 <p> allowNewServer = {{ allowNewServer }} </p>
+
+<!--Property Binding [disabled] + Event Binding (clic)-->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Agregar server</button>
+
 <p> serverCreationStatus = {{ serverCreationStatus }} </p>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)"/>
-<p> El nombre del server es {{ serverName }}</p>
+
+<!--Event Binding - fetching data regarding event object -->
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)"/>-->
+
+<input type="text" class="form-control" [(ngModel)]="serverName"/>
+
+<p *ngIf="serverCreated"> El server {{ serverName }} fue creado! ...</p>
