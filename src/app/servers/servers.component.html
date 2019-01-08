@@ -1,6 +1,8 @@
 <h2> Estoy en el ServersComponent !</h2>
 <app-server></app-server>
 <app-server></app-server>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Agregar server</button>
-<p>allowNewServer = {{ allowNewServer }}</p>
-
+<p> allowNewServer = {{ allowNewServer }} </p>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Agregar server</button>
+<p> serverCreationStatus = {{ serverCreationStatus }} </p>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"/>
+<p> El nombre del server es {{ serverName }}</p>
