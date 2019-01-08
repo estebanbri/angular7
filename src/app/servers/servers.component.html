@@ -1,4 +1,6 @@
 <h2> Estoy en el ServersComponent !</h2>
 <app-server></app-server>
 <app-server></app-server>
-<hr>
+<button class="btn btn-primary" [disabled]="!allowNewServer">Agregar server</button>
+<p>allowNewServer = {{ allowNewServer }}</p>
+
