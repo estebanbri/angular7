@@ -1,6 +1,6 @@
 <h2> Estoy en el ServersComponent !</h2>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let varServer of servers"></app-server>
+
 
 <!--String Interpolation-->
 <p> allowNewServer = {{ allowNewServer }} </p>
